@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="jQueryTest.FirstTest">
+      <class name="jQueryTest.TestNGPractice2">
         <methods>
-          <include name="startTest"/>
-          <include name="endTest"/>
-          <include name="autoCompleteTest"/>
+          <include name="a1"/>
         </methods>
-      </class> <!-- jQueryTest.FirstTest -->
+      </class> <!-- jQueryTest.TestNGPractice2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

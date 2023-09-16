@@ -1,41 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-16T14:47:19 EDT" name="Default suite" finished-at="2023-09-16T14:47:44 EDT" duration-ms="25350">
+  <suite started-at="2023-09-16T15:10:37 EDT" name="Default suite" finished-at="2023-09-16T15:10:37 EDT" duration-ms="23">
     <groups>
     </groups>
-    <test started-at="2023-09-16T14:47:19 EDT" name="Default test" finished-at="2023-09-16T14:47:44 EDT" duration-ms="25350">
-      <class name="jQueryTest.FirstTest">
-        <test-method is-config="true" signature="startTest()[pri:0, instance:jQueryTest.FirstTest@4229bb3f]" started-at="2023-09-16T14:47:19 EDT" name="startTest" finished-at="2023-09-16T14:47:20 EDT" duration-ms="1138" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTest -->
-        <test-method signature="baccordionTest()[pri:1, instance:jQueryTest.FirstTest@4229bb3f]" started-at="2023-09-16T14:47:20 EDT" name="baccordionTest" finished-at="2023-09-16T14:47:37 EDT" duration-ms="17162" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- baccordionTest -->
-        <test-method is-config="true" signature="endTest()[pri:0, instance:jQueryTest.FirstTest@4229bb3f]" started-at="2023-09-16T14:47:37 EDT" name="endTest" finished-at="2023-09-16T14:47:37 EDT" duration-ms="84" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endTest -->
-        <test-method is-config="true" signature="startTest()[pri:0, instance:jQueryTest.FirstTest@4229bb3f]" started-at="2023-09-16T14:47:37 EDT" name="startTest" finished-at="2023-09-16T14:47:38 EDT" duration-ms="617" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTest -->
-        <test-method signature="autoCompleteTest()[pri:2, instance:jQueryTest.FirstTest@4229bb3f]" started-at="2023-09-16T14:47:38 EDT" name="autoCompleteTest" finished-at="2023-09-16T14:47:44 EDT" duration-ms="6252" status="FAIL">
-          <exception class="java.lang.NullPointerException">
+    <test started-at="2023-09-16T15:10:37 EDT" name="Default test" finished-at="2023-09-16T15:10:37 EDT" duration-ms="23">
+      <class name="jQueryTest.TestNGPractice2">
+        <test-method signature="a1()[pri:0, instance:jQueryTest.TestNGPractice2@4efc180e]" started-at="2023-09-16T15:10:37 EDT" name="a1" finished-at="2023-09-16T15:10:37 EDT" duration-ms="4" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.By.findElement(org.openqa.selenium.SearchContext)" because "by" is null]]>
+              <![CDATA[null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.By.findElement(org.openqa.selenium.SearchContext)" because "by" is null
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-at utilities.SeleniumLib.getElement(SeleniumLib.java:28)
-at jQueryTest.FirstTest.autoCompleteTest(FirstTest.java:52)
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.fail(Assert.java:115)
+at jQueryTest.TestNGPractice2.a1(TestNGPractice2.java:17)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -66,15 +47,19 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- autoCompleteTest -->
-        <test-method is-config="true" signature="endTest()[pri:0, instance:jQueryTest.FirstTest@4229bb3f]" started-at="2023-09-16T14:47:44 EDT" name="endTest" finished-at="2023-09-16T14:47:44 EDT" duration-ms="76" status="PASS">
+        </test-method> <!-- a1 -->
+        <test-method signature="a3()[pri:0, instance:jQueryTest.TestNGPractice2@4efc180e]" started-at="2023-09-16T15:10:37 EDT" name="a3" finished-at="2023-09-16T15:10:37 EDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- endTest -->
-      </class> <!-- jQueryTest.FirstTest -->
+        </test-method> <!-- a3 -->
+        <test-method signature="a2()[pri:0, instance:jQueryTest.TestNGPractice2@4efc180e]" started-at="2023-09-16T15:10:37 EDT" name="a2" finished-at="2023-09-16T15:10:37 EDT" depends-on-methods="jQueryTest.TestNGPractice2.a1" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- a2 -->
+      </class> <!-- jQueryTest.TestNGPractice2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
