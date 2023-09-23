@@ -30,6 +30,17 @@ public class SeleniumLib {
 		return driver.findElement(locator);
 
 	}
+	
+	public void clickElem(By locator) {
+		highlight(locator);
+		getElement(locator).click();
+	}
+	
+	public void clickElem(WebElement elem) {
+		highlight(elem);
+		elem.click();
+	}
+	
 
 	public void highlight(By locator) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -41,6 +52,22 @@ public class SeleniumLib {
 			customWait(1);
 
 			js.executeScript("arguments[0].setAttribute('style', arguments[1]);", driver.findElement(locator), "");
+			customWait(1);
+
+		}
+
+	}
+	
+	public void highlight(WebElement elem) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+
+		for (int i = 0; i < 3; i++) {
+			js.executeScript("arguments[0].setAttribute('style', arguments[1]);", elem,
+					"color: yellow; border: 2px solid yellow;");
+
+			customWait(1);
+
+			js.executeScript("arguments[0].setAttribute('style', arguments[1]);", elem, "");
 			customWait(1);
 
 		}

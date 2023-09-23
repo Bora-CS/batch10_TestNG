@@ -10,11 +10,12 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import locators.jQueryLocators;
+import utilities.BaseTest;
 import utilities.SeleniumLib;
 
-public class FirstTest {
-	WebDriver driver;
-	SeleniumLib lib ;
+public class FirstTest extends BaseTest{
+
 
 	@Test(priority = 1)
 	public void baccordionTest() {
@@ -26,13 +27,12 @@ public class FirstTest {
 
 		driver.switchTo().defaultContent();
 
-		driver.findElement(By.linkText("Autocomplete")).click();
+		driver.findElement(jQueryLocators.autocompleteLink).click();
 		
-//		-------------
 		
 	
 		
-		lib.getElement(By.linkText("Autocomplete")).click();
+		lib.getElement(jQueryLocators.autocompleteLink).click();
 		
 		
 		
@@ -49,7 +49,7 @@ public class FirstTest {
 		
 		
 		
-		lib.getElement(null).sendKeys(null);
+		lib.getElement(jQueryLocators.autocompleteLink).sendKeys(null);
 		lib.getElement(null).sendKeys(null);
 		lib.getElement(null).sendKeys(null);
 		lib.getElement(null).sendKeys(null);
@@ -61,18 +61,5 @@ public class FirstTest {
 
 	}
 
-	@BeforeMethod
-	public void startTest() {
-		// driver
-		System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver");
-		driver = new ChromeDriver();
-		
-		lib = new SeleniumLib(driver);
-	}
-
-	@AfterMethod
-	public void endTest() {
-		driver.quit();
-	}
 
 }
